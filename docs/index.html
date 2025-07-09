@@ -45,10 +45,10 @@
 <nav class="nav-wrapper blue-grey darken-3">
     <div class="container">
         <a href="#" class="brand-logo" style="font-family: Kalam, serif;" aria-label="Home page of ParkingNow">ParkingNow</a>
-        <a href="#" data-target="mobile-menu" class="sidenav-trigger" aria-label="Open mobile menu"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
-            <li><a class="NT" href="index.html" data-i18n="home" aria-label="Go to Home page">Home</a></li>
-            <li><a class="NT" href="Caracteristicas.html" data-i18n="features" aria-label="View Features">Features</a></li>
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger" aria-label="Open mobile menu" aria-controls="mobile-menu" aria-expanded="false"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down" role="menubar" aria-label="Main navigation">
+            <li role="none"><a role="menuitem" class="NT" href="index.html" data-i18n="home" aria-label="Go to Home page">Home</a></li>
+            <li role="none"><a role="menuitem" class="NT" href="Caracteristicas.html" data-i18n="features" aria-label="View Features">Features</a></li>
             <li><a class="NT" href="#" data-i18n="reserveSpace" aria-label="Reserve parking space">Reserve Space</a></li>
             <li><a class="NT" href="About.html" data-i18n="contactUs" aria-label="Contact us">Contact Us</a></li>
             <li><a class="NT" href="Conditions.html" data-i18n="termsConditions" aria-label="Terms and Conditions">Terms&nbsp;and&nbsp;Conditions</a></li>
@@ -58,14 +58,25 @@
             <li>
                 <button id="languageSwitcher" class="btn grey darken-3 white-text" style="margin-left: 15px;" aria-label="Switch language to Spanish">Español</button>
             </li>
+            <!-- Dark Mode Toggle Switch -->
+            <li style="margin-left: 15px;">
+                <div class="switch">
+                    <label aria-label="Toggle dark mode">
+                        <i class="material-icons tiny white-text" style="vertical-align: middle;">brightness_5</i> <!-- Sun icon for light mode -->
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="lever"></span>
+                        <i class="material-icons tiny white-text" style="vertical-align: middle;">brightness_4</i> <!-- Moon icon for dark mode -->
+                    </label>
+                </div>
+            </li>
         </ul>
     </div>
 </nav>
 
-<ul class="sidenav" id="mobile-menu">
-    <li><a href="index.html" class="NT" data-i18n="home" aria-label="Go to Home page">Home</a></li>
-    <li><a href="Caracteristicas.html" class="NT" data-i18n="features" aria-label="View Features">Features</a></li>
-    <li><a href="#" class="NT" data-i18n="reserveSpace" aria-label="Reserve parking space">Reserve Space</a></li>
+<ul class="sidenav" id="mobile-menu" role="menu" aria-label="Mobile navigation">
+    <li role="none"><a role="menuitem" href="index.html" class="NT" data-i18n="home" aria-label="Go to Home page">Home</a></li>
+    <li role="none"><a role="menuitem" href="Caracteristicas.html" class="NT" data-i18n="features" aria-label="View Features">Features</a></li>
+    <li role="none"><a role="menuitem" href="#" class="NT" data-i18n="reserveSpace" aria-label="Reserve parking space">Reserve Space</a></li>
     <li><a href="About.html" class="NT" data-i18n="contactUs" aria-label="Contact us">Contact Us</a></li>
     <li><a href="conditions.html" class="NT" data-i18n="termsConditions" aria-label="Terms and Conditions">Terms&nbsp;and&nbsp;Conditions</a></li>
     <li><a href="https://parkingnow-14273.web.app" class="btn yellow darken-1" data-i18n="login" aria-label="Go to login page">Log in</a></li>
@@ -318,57 +329,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 <!-- Custom JS -->
-<script>
-    // Toggle chatbox visibility
-    const chatButton = document.getElementById('chatButton');
-    const chatBox = document.getElementById('chatBox');
-    const closeChat = document.getElementById('closeChat');
-
-    chatButton.addEventListener('click', () => {
-        chatBox.classList.toggle('show');
-    });
-
-    closeChat.addEventListener('click', () => {
-        chatBox.classList.remove('show');
-    });
-
-    // Language Switcher Functionality
-    let currentLanguage = "en";
-
-    async function loadLanguage(lang) {
-        try {
-            const response = await fetch(`i18n/${lang}.json`);
-            const translations = await response.json();
-
-            document.querySelectorAll("[data-i18n]").forEach((element) => {
-                const key = element.getAttribute("data-i18n");
-                const translation = translations[key];
-
-                if (translation) {
-                    if (element.children.length === 0) {
-                        element.textContent = translation;
-                    } else {
-                        console.warn(`⚠️ No se tradujo porque contiene HTML interno: [data-i18n="${key}"]`);
-                    }
-                }
-            });
-
-            // Actualiza el texto del botón de cambio de idioma
-            document.getElementById("languageSwitcher").innerText = lang === "en" ? "Español" : "English";
-        } catch (error) {
-            console.error("❌ Error cargando traducción:", error);
-        }
-    }
-
-    document.getElementById("languageSwitcher").addEventListener("click", () => {
-        currentLanguage = currentLanguage === "en" ? "es" : "en";
-        loadLanguage(currentLanguage);
-    });
-
-    document.addEventListener("DOMContentLoaded", () => {
-        loadLanguage(currentLanguage);
-    });
-</script>
+<script src="js/script.js"></script>
 
 </body>
 
