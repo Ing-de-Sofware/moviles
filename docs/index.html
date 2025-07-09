@@ -21,6 +21,28 @@
 
 <body>
 
+<!-- Header Section -->
+<header class="center-align" style="padding: 20px 0; background-color: var(--hero-bg-color); display: flex; justify-content: center; align-items: center; position: relative;">
+    <h1 style="font-family: 'Kalam', cursive; color: var(--hero-accent-color); margin: 0; font-size: 3rem; text-align: center; flex-grow: 1;" data-i18n="appName">PARKINGNOW</h1>
+    <div style="position: absolute; right: 20px; display: flex; align-items: center;">
+        <!-- Dark Mode Toggle Switch -->
+        <div class="switch" style="margin-right: 15px;">
+            <label style="color: var(--hero-text-color);" aria-label="Toggle dark mode">
+                <span data-i18n="darkMode" style="margin-right: 5px;">Modo Oscuro</span>
+                <input type="checkbox" id="headerDarkModeToggle">
+                <span class="lever"></span>
+            </label>
+        </div>
+        <!-- Language Selector -->
+        <div style="margin-left: 15px;">
+            <select id="headerLanguageSelector" class="browser-default" style="background-color: var(--hero-bg-color); color: var(--hero-text-color); border: 1px solid var(--hero-text-color); border-radius: 4px; padding: 5px;" aria-label="Select language">
+                <option value="en_US" data-i18n="languageEn">EN</option>
+                <option value="es_419" data-i18n="languageEs">ES</option>
+            </select>
+        </div>
+    </div>
+</header>
+
 <!-- Floating Chat Button -->
 <button id="chatButton" class="btn-floating btn-large waves-effect waves-light yellow darken-1" aria-label="Open platform chat">
     <i class="material-icons">P</i>
