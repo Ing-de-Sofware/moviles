@@ -140,6 +140,36 @@ document.addEventListener("DOMContentLoaded", () => {
     // Load initial language
     loadLanguage(currentLanguage);
 
+    // Language selector in the header
+    const headerLanguageSelector = document.getElementById('headerLanguageSelector');
+    if (headerLanguageSelector) {
+        headerLanguageSelector.value = currentLanguage; // Set initial value based on loaded language
+        headerLanguageSelector.addEventListener('change', (event) => {
+            currentLanguage = event.target.value;
+            loadLanguage(currentLanguage);
+            // If navbar language switcher exists, update its text (optional, as loadLanguage handles main button)
+             if (languageSwitcherButton) {
+                if (currentLanguage === "en_US") {
+                    languageSwitcherButton.textContent = "Español (Latinoamérica)";
+                } else {
+                    languageSwitcherButton.textContent = "English (US)";
+                }
+            }
+        });
+    }
+
+    // Update header selector when navbar button is clicked
+    if (languageSwitcherButton && headerLanguageSelector) {
+        const observer = new MutationObserver(() => {
+            // currentLanguage is updated by the loadLanguage function called by the button
+            if (headerLanguageSelector.value !== currentLanguage) {
+                headerLanguageSelector.value = currentLanguage;
+            }
+        });
+        observer.observe(languageSwitcherButton, { childList: true, characterData: true, subtree: true });
+    }
+
+
     // Dark Mode Toggle Functionality
     const darkModeToggle = document.getElementById('darkModeToggle');
     const body = document.body;
@@ -166,16 +196,29 @@ document.addEventListener("DOMContentLoaded", () => {
     applyTheme(savedTheme);
     currentLanguage = localStorage.getItem("language") || "en_US"; // Ensure currentLanguage is also loaded
 
-    // Event listener for the toggle
+    // Event listener for the navbar toggle
     if (darkModeToggle) {
         darkModeToggle.addEventListener('change', () => {
-            if (darkModeToggle.checked) {
-                applyTheme('dark');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                applyTheme('light');
-                localStorage.setItem('theme', 'light');
-            }
+            const newTheme = darkModeToggle.checked ? 'dark' : 'light';
+            applyTheme(newTheme);
+            localStorage.setItem('theme', newTheme);
+            // Sync header toggle if it exists
+            if (headerDarkModeToggle) headerDarkModeToggle.checked = darkModeToggle.checked;
+        });
+    }
+
+    // Event listener for the header toggle
+    const headerDarkModeToggle = document.getElementById('headerDarkModeToggle');
+    if (headerDarkModeToggle) {
+        // Sync with navbar toggle initial state
+        if (darkModeToggle) headerDarkModeToggle.checked = darkModeToggle.checked;
+
+        headerDarkModeToggle.addEventListener('change', () => {
+            const newTheme = headerDarkModeToggle.checked ? 'dark' : 'light';
+            applyTheme(newTheme);
+            localStorage.setItem('theme', newTheme);
+            // Sync navbar toggle if it exists
+            if (darkModeToggle) darkModeToggle.checked = headerDarkModeToggle.checked;
         });
     }
 });
