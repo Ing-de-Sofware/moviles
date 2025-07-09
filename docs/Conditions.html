@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+    <title>ParkingNow</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#101a23] dark group/design-root overflow-x-hidden" style='font-family: "Public Sans", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <nav class="nav-wrapper blue-grey darken-3">
+          <div class="container">
+            <a href="index.html" class="brand-logo" style="font-family: Kalam, serif;" aria-label="Home page of ParkingNow">ParkingNow</a>
+            <a href="#" data-target="mobile-menu" class="sidenav-trigger" aria-label="Open mobile menu"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a class="NT" href="index.html" data-i18n="home" aria-label="Go to Home page">Home</a></li>
+              <li><a class="NT" href="Caracteristicas.html" data-i18n="features" aria-label="View Features">Features</a></li>
+              <li><a class="NT" href="#" data-i18n="reserveSpace" aria-label="Reserve parking space">Reserve Space</a></li>
+              <li><a class="NT" href="About.html" data-i18n="contactUs" aria-label="Contact us">Contact Us</a></li>
+              <li><a class="NT" href="Conditions.html" aria-label="Terms and Conditions">Terms & Conditions</a></li>
+              <li><a href="https://parkingnow-14273.web.app" class="btn yellow darken-1" style="font-family: Kalam, serif;" data-i18n="login" aria-label="Go to login page">Log in</a></li>
+              <li><a href="https://parkingnow-14273.web.app" class="btn yellow darken-2" style="font-family: Kalam, serif;" data-i18n="registerAccount" aria-label="Go to register page">Register Account</a></li>
+              <li>
+                <button id="languageSwitcher" class="btn grey darken-3 white-text" style="margin-left: 15px;" aria-label="Switch language to Spanish">Español</button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-menu">
+          <li><a href="index.html" class="NT" data-i18n="home" aria-label="Go to Home page">Home</a></li>
+          <li><a href="Caracteristicas.html" class="NT" data-i18n="features" aria-label="View Features">Features</a></li>
+          <li><a href="#" class="NT" data-i18n="reserveSpace" aria-label="Reserve parking space">Reserve Space</a></li>
+          <li><a href="About.html" class="NT" data-i18n="contactUs" aria-label="Contact us">Contact Us</a></li>
+          <li><a href="Conditions.html" class="NT" aria-label="Terms and Conditions">Terms & Conditions</a></li>
+          <li><a href="https://parkingnow-14273.web.app" class="btn yellow darken-1" data-i18n="login" aria-label="Go to login page">Log in</a></li>
+          <li><a href="https://parkingnow-14273.web.app" class="btn yellow darken-2" data-i18n="registerAccount" aria-label="Go to register page">Register Account</a></li>
+        </ul>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="@container">
+              <div class="@[480px]:p-4">
+                <div
+                  class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4"
+                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0pLR-cm8M4NhZWZjzfiUnvxWWrpZHhqGm2PjSNM1haFSAUjvy-IfkVdbB3JoFIlUyB8KjNUCXhy10FUqt3T35vdXa88pKEy8oZMGbAQV0Brncoi9wB3txPmfURvjEDz7ZWLUTHHGR6EtJFgKs7Pl97n7qynj_J1IN6KVMOroISTuYk1cfME7qeWlGq1ytnLdjjkx8MuE02AxxlrriMUXhSNv-HbrAOXZQbXD-ici4vEOzjLeRPo3DncKMVuV5n4h5epY1WCSVv9He");'
+                >
+                  <div class="flex flex-col gap-2 text-center">
+                    <h1
+                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                    >
+                      Términos y Condiciones
+                    </h1>
+                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                      Lee estos términos antes de usar ParkingNow. Al utilizar nuestra plataforma, aceptas estos términos.
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">1. Aceptación de Términos</h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">
+              Al acceder o utilizar la plataforma ParkingNow, ya sea a través de nuestro sitio web o aplicación móvil, aceptas regirte por los presentes Términos y Condiciones. Estos términos constituyen un acuerdo legal vinculante entre tú y el equipo de ParkingNow. Si no estás de acuerdo con alguno de los términos aquí establecidos, te solicitamos que no utilices nuestros servicios. El uso continuado de nuestra plataforma se interpretará como una aceptación tácita de todas las cláusulas aquí expresadas.
+            </p>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">2. Descripción del Servicio</h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">
+              ParkingNow proporciona un servicio integral que permite a los usuarios encontrar, reservar y administrar espacios de estacionamiento desde la comodidad de sus dispositivos móviles. Nuestro sistema facilita la interacción entre conductores y propietarios de espacios, promoviendo el uso eficiente del espacio urbano. Los usuarios pueden acceder a mapas interactivos, comparar precios, aprovechar promociones y realizar pagos en línea. Además, los propietarios tienen herramientas para publicar y gestionar sus estacionamientos disponibles en tiempo real.
+            </p>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">3. Cuentas de Usuario</h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">
+              Para disfrutar plenamente de nuestras funcionalidades, debes crear una cuenta de usuario personal. Eres responsable de mantener tus credenciales de acceso seguras y confidenciales. Nos reservamos el derecho de desactivar o eliminar cuentas que presenten conductas sospechosas o incumplan nuestras políticas. El usuario se compromete a brindar información veraz, actualizada y completa al momento de registrarse, y a actualizarla cuando sea necesario.
+            </p>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">4. Pagos y Tarifas</h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">
+              Algunos servicios ofrecidos por ParkingNow, como la reserva anticipada de espacios premium o el uso prolongado de estacionamientos, pueden requerir el pago de tarifas específicas. Todos los cargos están claramente especificados antes de confirmar cualquier operación. Nos reservamos el derecho de modificar los precios en cualquier momento, notificando previamente a los usuarios mediante la plataforma. Las transacciones se procesan de manera segura y utilizamos pasarelas de pago confiables para proteger tu información financiera.
+            </p>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">5. Propiedad Intelectual</h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">
+              Todos los materiales contenidos en la plataforma, como software, imágenes, textos, gráficos, logotipos y bases de datos, están protegidos por las leyes de derechos de autor, marcas registradas y otras normativas vigentes. El uso indebido, reproducción no autorizada o distribución de estos materiales constituirá una infracción legal y podrá ser sancionada con medidas legales. El usuario reconoce que la marca ParkingNow es de propiedad exclusiva del equipo desarrollador.
+            </p>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">6. Garantías y Responsabilidades</h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">
+              ParkingNow se proporciona tal cual está, sin ningún tipo de garantía, expresa o implícita. No garantizamos que el servicio será ininterrumpido, puntual, seguro o libre de errores. No nos hacemos responsables de retrasos, fallos técnicos, pérdida de datos o cualquier otro perjuicio derivado del uso de la plataforma. Es responsabilidad del usuario mantener sus dispositivos actualizados y contar con conexión a internet estable.
+            </p>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">7. Limitación de Responsabilidad</h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">
+              En la máxima medida permitida por la legislación aplicable, ParkingNow no será responsable por daños directos, indirectos, incidentales, especiales o consecuenciales derivados del uso o la imposibilidad de uso del servicio. Esto incluye, sin limitación, pérdida de ingresos, pérdida de datos, daños a la propiedad o reclamaciones de terceros. En ningún caso la responsabilidad total de ParkingNow excederá el monto pagado por el usuario durante los últimos 12 meses.
+            </p>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">8. Legislación Aplicable</h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">
+              Este acuerdo se regirá e interpretará de conformidad con las leyes de la República del Perú. Cualquier controversia que surja relacionada con estos Términos y Condiciones será sometida a los tribunales competentes de Lima Metropolitana. Al utilizar ParkingNow, aceptas someterte a la jurisdicción exclusiva de dichos tribunales.
+            </p>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">9. Modificaciones</h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">
+              Nos reservamos el derecho de revisar y actualizar estos Términos y Condiciones en cualquier momento. Las modificaciones serán comunicadas oportunamente a través de nuestros canales oficiales. Recomendamos revisar esta sección periódicamente para estar al tanto de los cambios. El uso continuo de nuestros servicios después de cualquier modificación constituirá aceptación de dichos cambios.
+            </p>
+            <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">10. Contacto</h2>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">
+              Si tienes alguna consulta, comentario o requerimiento relacionado con estos términos, puedes contactarnos mediante correo electrónico a soporte@parkingnow.com. También puedes visitar nuestras oficinas administrativas ubicadas en Av. Innovación 123, Lima, Perú.
+            </p>
+            <p class="text-white text-base font-normal leading-normal pb-3 pt-1 px-4">
+              <em>Última actualización: 18 de junio de 2025</em>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(elems);
+      });
+    </script>
+  </body>
+</html>

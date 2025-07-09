@@ -1,0 +1,786 @@
+.nav-wrapper {
+    /* No overrides here, just a placeholder for specificity if needed */
+}
+.sidenav-trigger {
+    display: none;
+}
+body {
+    background-color: #ffffff;
+    font-family: "Tinos", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.NT {
+    font-family: Kalam, serif;
+}
+
+/* Hero Section */
+#index-banner {
+    background-color: #2D333F;
+    padding: 100px 0;
+    color: white;
+}
+
+.ParkingNow_Logo {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+#index-banner h1 {
+    font-family: 'Kalam', cursive;
+    font-size: 3.5rem;
+    line-height: 4rem;
+    color: #ffeb3b;
+}
+
+#index-banner p {
+    font-size: 1.2rem;
+}
+
+#index-banner .btn-large {
+    background-color: #ffeb3b;
+    color: #2a2a2a;
+    margin-top: 20px;
+}
+
+#index-banner img {
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Cities Section */
+.section h2 {
+    color: #2a2a2a;
+}
+
+.card-image img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Service Benefits Section */
+.benefits-section {
+    background-color: #e8db6c;
+    padding: 50px 0;
+}
+
+.benefits-section h2 {
+    text-align: center;
+    color: #fff;
+    font-family: 'Kalam', cursive;
+    font-size: 4.5rem;
+}
+
+.benefits-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.sidenav li a {
+    font-family: Kalam, serif;
+}
+
+.benefit {
+    background-color: #2a2a2a;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    flex: 1;
+    max-width: 400px;
+    transition: transform 0.3s;
+}
+
+.benefit:hover {
+    transform: scale(1.05);
+}
+
+/* Promotions Section */
+.promotion-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.promotion {
+    background-color: rgba(232, 252, 114, 0.56);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.promotion2 {
+    font-family: Kalam, serif;
+    background-color: rgba(255, 198, 45, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: start;
+    width: 30%;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+    color: white;
+}
+
+.promotion2 p {
+    font-family: Tinos, serif;
+    color: white;
+}
+
+.promotion:hover {
+    transform: scale(1.05);
+}
+
+.promotion-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* CTA Section */
+.cta-section {
+    position: relative;
+    background-color: #000000;
+    padding: 60px 0;
+    color: white;
+    text-align: center;
+    font-family: Kalam, serif;
+}
+
+.cta-title {
+    font-family: Kalam, serif;
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.cta-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.promotion h3 {
+    font-family: Kalam, serif;
+}
+
+.cta-button {
+    background-color: #ffeb3b;
+    color: #2a2a2a;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #d5b527;
+}
+
+.cta-button a {
+    color: #2a2a2a;
+    text-decoration: none;
+    font-family: Kalam, serif;
+}
+
+/* Imagen dentro de la CTA mejorada */
+.cta-banner-wrapper {
+    text-align: center;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.cta-banner {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.cta-banner:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Register Section */
+.register_p {
+    font-family: "Tinos", serif;
+    opacity: 1;
+    background-size: 32px 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #363c48, #5f687c);
+}
+
+.container_r {
+    background-color: #000000;
+    padding: 35px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+    max-width: 1600px;
+    height: auto;
+}
+
+.center-align {
+    font-family: Kalam, serif;
+    text-shadow: #333333 6px 6px 20px;
+}
+
+.btn-large waves-effect waves-light {
+    border-radius: 6px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    transition: 0.3s;
+}
+
+.card-title {
+    font-family: Kalam, sans-serif;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.card-title p {
+    font-family: Tinos, serif;
+}
+
+.card:hover {
+    transition: 0.3s;
+    width: 103%;
+    height: 103%;
+}
+
+.option {
+    text-align: center;
+    padding: 0;
+    flex: 1;
+    margin: 10px 30px;
+}
+
+.Choose1 {
+    background-color: #cff1ff;
+    border-radius: 30px;
+    transition: 0.5s;
+    margin: 20px;
+}
+
+.Choose1:hover {
+    background-color: #9fd7ff;
+    color: white;
+    border-radius: 30px;
+}
+
+.Choose2 {
+    background-color: #fffbcf;
+    border-radius: 30px;
+    transition: 0.5s;
+    margin: 20px;
+    height: 120%;
+}
+
+.Choose2:hover {
+    background-color: #ffef9f;
+    color: white;
+    border-radius: 30px;
+}
+
+.LogoInicio {
+    top: 5%;
+    left: 4%;
+    position: absolute;
+    width: 8%;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.option h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.option p {
+    font-size: 0.9em;
+    color: #fff;
+    line-height: 1.5em;
+}
+
+.Register {
+    font-family: "Kalam", cursive;
+}
+
+.register-box {
+    display: flex;
+    width: 100%;
+}
+
+.register-form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+}
+
+.register-form h1 {
+    font-size: 3.5em;
+    margin: 0;
+}
+
+.register-form h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.register-form p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.register-form a {
+    color: #5e3fd6;
+    text-decoration: none;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    background-color: #d3d3d3;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.CircleImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.option p {
+    font-size: 0.9em;
+    color: #8f8f8f;
+    line-height: 1.5em;
+    transition: 0.3s;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+.CircleImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ptex {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    padding-top: 30px;
+}
+
+footer h5,
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* GitHub Icon */
+/* GitHub Icon Button */
+.footer-social {
+    display: flex;
+    justify-content: center;
+    margin-top: -20px; /* Ajusta según sea necesario */
+    margin-bottom: 10px;
+}
+
+.Btn {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.svgContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    letter-spacing: 0.8px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.BG {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #181818;
+    z-index: -1;
+    border-radius: 10px;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.Btn:hover .BG {
+    transform: rotate(35deg);
+    transform-origin: bottom;
+}
+
+.Btn:hover .svgContainer {
+    background-color: rgba(156, 156, 156, 0.466);
+    backdrop-filter: blur(4px);
+}
+
+
+/* Chat Button */
+#chatButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chat-box {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 1000;
+    max-width: 300px;
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
+
+
+@media (max-width: 600px) {
+    .container_r{
+        background-color: #000000;
+        padding: 35px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0px 0 0 0 rgba(0, 0, 0, 0.2);
+        max-width: 600px;
+        height: auto;
+    }
+    .cta-title{
+        font-size: 1.1rem;
+    }
+    .register-form{
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 100%;
+    }
+    .circle{
+        width: 100px;
+        height: 100px;
+    }
+
+    .promotion h3{
+        font-size: 1.2rem;
+    }
+}
+
+.rounded-video {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 800px) {
+    .container_r{
+        background-color: #000000;
+        padding: 35px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0px 0 0 0 rgba(0, 0, 0, 0.2);
+        max-width: 700px;
+        height: auto;
+    }
+    .cta-title{
+        font-size: 1.1rem;
+    }
+    .register-form{
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.9);
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        max-width: 100%;
+    }
+    .circle{
+        width: 100px;
+        height: 100px;
+    }
+
+    .promotion h3{
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 400px) {
+    .container_r{
+        background-color: #000000;
+        padding: 35px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: none;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .cta-title{
+        font-size: 1.1rem;
+    }
+    .register-form{
+        background-color: white;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: none;
+        display: flex;
+        justify-content: normal;
+        width: 80%;
+        max-width: 100%;
+    }
+    .circle{
+        width: 30px;
+        height: 30px;
+    }
+
+    .promotion h3{
+        font-size: 0.8rem;
+    }
+    .option p{
+        font-size: 0.5em;
+    }
+    .register-form h2{
+        font-size:0.8em;
+    }
+
+    .promotion2 h3{
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+.btn-terminos {
+    color: #ffeb3b;
+    text-decoration: underline;
+    font-size: 0.95rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.btn-terminos:hover {
+    color: #ffffff;
+}
+@media (max-width: 768px) {
+    nav.nav-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    nav.nav-wrapper .container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav.nav-wrapper ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav.nav-wrapper ul li {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .brand-logo {
+        font-size: 1.5rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .sidenav-trigger {
+        display: block;
+    }
+
+    nav.nav-wrapper ul li a,
+    nav.nav-wrapper ul li button {
+        display: inline-block;
+        width: 80%;
+        max-width: 240px;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 768px) {
+    #index-banner {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    #index-banner h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    #index-banner p {
+        font-size: 1rem;
+    }
+
+    .benefits-grid,
+    .promotion-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefit,
+    .promotion,
+    .promotion2 {
+        width: 90% !important;
+    }
+
+    .cta-title {
+        font-size: 1.5rem;
+    }
+
+    .cta-subtitle {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+
+    .register-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .option {
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    .card-image img {
+        height: 160px;
+    }
+
+    footer .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .col {
+        margin-bottom: 20px;
+    }
+}
+/* Carousel Section Styles */
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.carousel-item {
+    width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

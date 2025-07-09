@@ -1,0 +1,211 @@
+/* Styles for Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2a2a2a;
+    padding: 10px 20px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-family: 'Tinos', serif;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login-button, .register-button {
+    background-color: #ffeb3b;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+
+.login-button a, .register-button a {
+    color: #2a2a2a;
+    text-decoration: none;
+}
+
+/* General Styles */
+body {
+    font-family: 'Tinos', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2a2a2a; /* Fondo oscuro */
+    color: #f4f4f9; /* Color claro para el texto */
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ffeb3b; /* Color amarillo destacado para los títulos */
+}
+
+p {
+    line-height: 1.6;
+    color: #f4f4f9; /* Asegurarse de que el texto general siga siendo claro */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container1
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en pantallas más pequeñas */
+    background: linear-gradient(to right, #363c48, #5f687c);
+}
+
+/* Mejoras para las secciones de contenido */
+ .container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en pantallas más pequeñas */
+    background: #2f3640;
+}
+
+.content, .content2 {
+    flex: 1 1 50%; /* Flexibilidad en el ancho del contenido */
+    max-width: 100%;
+}
+
+.image-container, .image-container2 {
+    flex: 1 1 40%; /* Flexibilidad para que las imágenes también se ajusten correctamente */
+    max-width: 100%;
+}
+
+.image-container img, .image-container2 img {
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    /* Ajustes responsivos para pantallas medianas */
+    .container1, .container2 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content, .content2 {
+        order: 2; /* El contenido se mostrará debajo de las imágenes en pantallas pequeñas */
+        max-width: 100%;
+    }
+
+    .image-container, .image-container2 {
+        order: 1;
+        margin-bottom: 20px;
+    }
+}
+
+/* Banner Section */
+.Banner {
+    background-color: #2a2a2a;
+    padding: 20px 0;
+    color: white;
+}
+
+/* Footer */
+.footer-section {
+    background-color: #2a2a2a;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Hacer el footer más flexible */
+}
+
+.footer-logo img {
+    height: 40px;
+}
+
+.footer-menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #2a2a2a;
+    padding: 10px;
+    margin-top: 10px;
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 5px;
+    color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Ajuste para las imágenes grandes */
+.bannerInfo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .menu {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .auth-buttons {
+        margin-top: 10px;
+    }
+}

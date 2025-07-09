@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARKINGNOW - Características</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/parkingnow.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&family=Kalam:wght@300;400;700&family=Inter:wght@100..900&family=Nunito:wght@200..1000&display=swap" rel="stylesheet">
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="css/styles-caracteristicas.css">
+</head>
+
+<body>
+    <section class="Banner">
+        <nav class="navbar" aria-label="Barra de navegación principal">
+            <div class="logo">
+                <a href="#" aria-label="Página de inicio"><img src="images/parkingnow.png" alt="PARKINGNOW" class="ParkingNow_Logo"></a>
+            </div>
+            <div class="menu">
+                <a href="index.html" class="hover" aria-label="Ir a la página de inicio" id="toolbarHome">Inicio</a>
+                <a href="Caracteristicas.html" class="hover" aria-label="Ver características" id="toolbarFeatures">Características</a>
+                <a href="#Mision" class="hover" id="btnMision" aria-label="Ver misión" id="toolbarMission">Misión</a>
+                <a href="#Vision" class="hover" id="btnVision" aria-label="Ver visión" id="toolbarVision">Visión</a>
+                <div class="dropdown" aria-label="Menú de reserva de espacio">
+                    <a href="javascript:void(0)" class="hover dropdown-toggle" aria-haspopup="true" aria-expanded="false" aria-label="Abrir menú para reservar espacio">Reservar Espacio</a>
+                    <div class="dropdown-menu" aria-label="Opciones de reserva de espacio">
+                        <a href="reserve-lima" class="hover" aria-label="Reservar un espacio en Lima">Lima</a>
+                        <a href="reserve-arequipa" class="hover" aria-label="Reservar un espacio en Arequipa">Arequipa</a>
+                        <a href="reserve-cusco" class="hover" aria-label="Reservar un espacio en Cusco">Cusco</a>
+                    </div>
+                </div>
+            </div>
+            <div class="auth-buttons">
+            </div>
+            <!-- Language Switcher Button -->
+            <div>
+                <button id="languageSwitcher" class="btn grey darken-3 white-text" style="margin-left: 25px; padding: 13px; border: none; cursor: pointer; border-radius: 5px; background-color: #e8db6c; font-family: Kalam, Serif " aria-label="Cambiar idioma a inglés">English</button>
+            </div>
+        </nav>
+    </section>
+
+    <section class="Introduction">
+        <div class="container1">
+            <div class="content">
+                <h1 id="aboutTitle" aria-label="Características de PARKINGNOW">Características de <span class="success">PARKINGNOW</span></h1>
+                <p id="introduction" aria-label="Descripción de las características de PARKINGNOW">
+                    PARKINGNOW es una startup tecnológica enfocada en proporcionar una solución integral para el estacionamiento en tiempo real. Nuestra plataforma te permite reservar y pagar espacios utilizando la ubicación geográfica y sensores infrarrojos para gestionar la disponibilidad de manera automatizada y eficiente.
+                </p>
+            </div>
+            <div class="image-container">
+                <img src="images/Estacionamiento.jpg" alt="Estacionamiento inteligente" aria-label="Área de estacionamiento inteligente">
+            </div>
+        </div>
+    </section>
+
+    <section id="Mision" class="Mision">
+        <div class="container2">
+            <div class="content2">
+                <h1 id="missionTitle" aria-label="Misión de PARKINGNOW">Misión de <span class="success">PARKINGNOW</span></h1>
+                <p id="missionDescription" aria-label="Descripción de la misión">
+                    Actuar como un enlace entre conductores y propietarios, mejorando la experiencia de estacionamiento con tecnología eficiente.
+                </p>
+            </div>
+            <div class="image-container2">
+                <img src="images/Mision.jpg" alt="Imagen de misión" aria-label="Representación visual de la misión">
+            </div>
+        </div>
+    </section>
+
+    <section id="Vision" class="Vision">
+        <div class="container2">
+            <div class="content2">
+                <h1 id="visionTitle" aria-label="Visión de PARKINGNOW">Visión de <span class="success">PARKINGNOW</span></h1>
+                <p id="visionDescription" aria-label="Descripción de la visión">
+                    Actuar como un enlace entre conductores y propietarios, mejorando la experiencia de estacionamiento con tecnología eficiente.
+                </p>
+            </div>
+            <div class="image-container2">
+                <img src="images/Mision.jpg" alt="Imagen de visión" aria-label="Representación visual de la visión">
+            </div>
+        </div>
+    </section>
+
+    <section class="bannerInfo">
+        <img src="images/Banner_1.jpg" class="object-contain" alt="banner" aria-label="Banner promocional">
+    </section>
+
+    <footer class="footer-section" aria-label="Pie de página">
+        <div class="footer-content">
+            <div class="footer-logo" href="index.html">
+                <a href="index.html" aria-label="Página de inicio"><img src="images/parkingnow.png" alt="PARKINGNOW" class="h-10"></a>
+            </div>
+            <div class="footer-menu">
+                <a href="About.html" class="hover" aria-label="Acerca de nosotros" id="footerAbout">Acerca de</a>
+                <a href="Caracteristicas.html" class="hover" aria-label="Ver características" id="footerFeatures">Características</a>
+                <a href="About.html" class="hover" aria-label="Contáctanos" id="footerContact">Contáctanos</a>
+            </div>
+        </div>
+        <div class="footer-bottom" id="footerCopyright" aria-label="Derechos de autor">
+            &copy; 2024 PARKINGNOW. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- Custom JS for Language Switching -->
+    <script>
+        let currentLanguage = "es";
+
+        const translations = {
+            en: {
+                "appName": "PARKINGNOW",
+                "toolbarHome": "Home",
+                "toolbarFeatures": "Features",
+                "toolbarReserveSpace": "Reserve Space",
+                "toolbarContactUs": "Contact Us",
+                "toolbarLanguage": "ENGLISH",
+                "footerAbout": "About",
+                "footerFeatures": "Features",
+                "footerRights": "© 2024 PARKINGNOW. All rights reserved.",
+                "home": "Home",
+                "features": "Features",
+                "mission": "Mission",
+                "vision": "Vision",
+                "reserveSpace": "Reserve Space",
+                "login": "Log In",
+                "register": "Register",
+                "language": "English",
+                "featuresTitle": "Features of PARKINGNOW",
+                "featuresDescription": "PARKINGNOW is a tech startup focused on providing a comprehensive solution for real-time parking. Our platform allows you to reserve and pay for spaces using geographic location and infrared sensors to manage availability in an automated and efficient way.",
+                "smartParking": "Smart Parking",
+                "missionTitle": "Mission of PARKINGNOW",
+                "missionDescription": "Act as a link between drivers and owners, improving the parking experience with efficient technology.",
+                "missionImage": "Mission Image",
+                "visionTitle": "Vision of PARKINGNOW",
+                "visionDescription": "Act as a link between drivers and owners, improving the parking experience with efficient technology.",
+                "visionImage": "Vision Image"
+            },
+            es: {
+                "appName": "PARKINGNOW",
+                "toolbarHome": "Inicio",
+                "toolbarFeatures": "Características",
+                "toolbarReserveSpace": "Reservar Espacio",
+                "toolbarContactUs": "Contáctanos",
+                "toolbarLanguage": "INGLÉS",
+                "footerAbout": "Acerca de",
+                "footerFeatures": "Características",
+                "footerRights": "© 2024 PARKINGNOW. Todos los derechos reservados.",
+                "home": "Inicio",
+                "features": "Características",
+                "mission": "Misión",
+                "vision": "Visión",
+                "reserveSpace": "Reservar Espacio",
+                "login": "Iniciar sesión",
+                "register": "Registrar",
+                "language": "Inglés",
+                "featuresTitle": "Características de PARKINGNOW",
+                "featuresDescription": "PARKINGNOW es una startup tecnológica enfocada en proporcionar una solución integral para el estacionamiento en tiempo real. Nuestra plataforma te permite reservar y pagar espacios utilizando la ubicación geográfica y sensores infrarrojos para gestionar la disponibilidad de manera automatizada y eficiente",
+                "smartParking": "Estacionamiento inteligente",
+                "missionTitle": "Misión de PARKINGNOW",
+                "missionDescription": "Actuar como un enlace entre conductores y propietarios, mejorando la experiencia de estacionamiento con tecnología eficiente.",
+                "missionImage": "Imagen de misión",
+                "visionTitle": "Visión de PARKINGNOW",
+                "visionDescription": "Actuar como un enlace entre conductores y propietarios, mejorando la experiencia de estacionamiento con tecnología eficiente.",
+                "visionImage": "Imagen de visión"
+            }
+        };
+
+        document.getElementById('languageSwitcher').addEventListener('click', () => {
+            currentLanguage = currentLanguage === "es" ? "en" : "es";
+            document.querySelector('.Introduction h1').innerText = translations[currentLanguage].featuresTitle;
+            document.querySelector('#introduction').innerText = translations[currentLanguage].featuresDescription;
+            document.querySelector('#missionTitle').innerText = translations[currentLanguage].missionTitle;
+            document.querySelector('#missionDescription').innerText = translations[currentLanguage].missionDescription;
+            document.querySelector('#visionTitle').innerText = translations[currentLanguage].visionTitle;
+            document.querySelector('#visionDescription').innerText = translations[currentLanguage].visionDescription;
+            document.querySelector('.navbar a[href="index.html"]').innerText = translations[currentLanguage].toolbarHome;
+            document.querySelector('.navbar a[href="Caracteristicas.html"]').innerText = translations[currentLanguage].toolbarFeatures;
+            document.querySelector('.navbar a[href="#Mision"]').innerText = translations[currentLanguage].mission;
+            document.querySelector('.navbar a[href="#Vision"]').innerText = translations[currentLanguage].vision;
+            document.querySelector('.footer-menu a[href="About.html"]').innerText = translations[currentLanguage].footerAbout;
+            document.querySelector('.footer-menu a[href="Caracteristicas.html"]').innerText = translations[currentLanguage].footerFeatures;
+            document.querySelector('.footer-menu a[href="About.html"]').innerText = translations[currentLanguage].footerContact;
+            document.querySelector('.footer-bottom').innerText = translations[currentLanguage].footerRights;
+
+            // Change button text
+            document.getElementById('languageSwitcher').innerText = currentLanguage === "es" ? "English" : "Español";
+        });
+    </script>
+</body>
+
+</html>
