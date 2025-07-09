@@ -1,97 +1,200 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en-US"> <!-- Default language, will be updated by JS -->
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sobre Nosotros - ParkingNow</title>
+  <title data-i18n="aboutPageTitle">About Us - ParkingNow</title>
+  <!-- Favicon -->
+  <link rel="icon" href="images/parkingnow.ico" type="image/x-icon">
+  <!-- Materialize CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Main Stylesheet (shared with index.html) -->
+  <link rel="stylesheet" href="css/styles-index.css">
+  <!-- About Page Specific Styles (Adjust or remove rules that conflict with styles-index.css) -->
   <link rel="stylesheet" href="css/styles-about.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="header-container">
-      <img src="images/parkingnow.png" alt="Logo ParkingNow" class="logo" />
-      <div class="nav-container" style="display: flex; justify-content: center; align-items: center;">
-        <nav class="nav">
-          <a href="index.html">Inicio</a>
-          <a href="about.html">Nosotros</a>
-          <a href="#caracteristicas">Características</a>
-          <a href="#contacto">Contacto</a>
-        </nav>
-      </div>
+  <!-- Navbar from index.html -->
+  <nav class="nav-wrapper blue-grey darken-3">
+    <div class="container">
+        <a href="index.html" class="brand-logo" style="font-family: Kalam, serif;" aria-label="Home page of ParkingNow" data-i18n="appName">ParkingNow</a>
+        <a href="#" data-target="mobile-menu" class="sidenav-trigger" aria-label="Open mobile menu" aria-controls="mobile-menu" aria-expanded="false"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down" role="menubar" aria-label="Main navigation">
+            <li role="none"><a role="menuitem" class="NT" href="index.html" data-i18n="home">Home</a></li>
+            <li role="none"><a role="menuitem" class="NT" href="Caracteristicas.html" data-i18n="features">Features</a></li>
+            <li role="none"><a role="menuitem" class="NT" href="#" data-i18n="reserveSpace">Reserve Space</a></li>
+            <li role="none"><a role="menuitem" class="NT" href="About.html" data-i18n="contactUs">Contact Us</a></li>
+            <li role="none"><a role="menuitem" class="NT" href="Conditions.html" data-i18n="termsConditions">Terms&nbsp;and&nbsp;Conditions</a></li>
+            <li><a href="https://parkingnow-14273.web.app" class="btn yellow darken-1" style="font-family: Kalam, serif;" data-i18n="login">Log in</a></li>
+            <li><a href="https://parkingnow-14273.web.app" class="btn yellow darken-2" style="font-family: Kalam, serif;" data-i18n="registerAccount">Register Account</a></li>
+            <li>
+                <button id="languageSwitcher" class="btn grey darken-3 white-text" style="margin-left: 15px;" aria-label="Switch language">Language</button>
+            </li>
+            <li style="margin-left: 15px;">
+                <div class="switch">
+                    <label aria-label="Toggle dark mode">
+                        <i class="material-icons tiny white-text" style="vertical-align: middle;">brightness_5</i>
+                        <input type="checkbox" id="darkModeToggle" aria-pressed="false">
+                        <span class="lever"></span>
+                        <i class="material-icons tiny white-text" style="vertical-align: middle;">brightness_4</i>
+                    </label>
+                </div>
+            </li>
+        </ul>
     </div>
-  </header>
+  </nav>
+
+  <!-- Mobile Sidenav -->
+  <ul class="sidenav" id="mobile-menu" role="menu" aria-label="Mobile navigation">
+    <li role="none"><a role="menuitem" href="index.html" class="NT" data-i18n="home">Home</a></li>
+    <li role="none"><a role="menuitem" href="Caracteristicas.html" class="NT" data-i18n="features">Features</a></li>
+    <li role="none"><a role="menuitem" href="#" class="NT" data-i18n="reserveSpace">Reserve Space</a></li>
+    <li role="none"><a role="menuitem" href="About.html" class="NT" data-i18n="contactUs">Contact Us</a></li>
+    <li role="none"><a role="menuitem" href="Conditions.html" class="NT" data-i18n="termsConditions">Terms&nbsp;and&nbsp;Conditions</a></li>
+    <li><a href="https://parkingnow-14273.web.app" class="btn yellow darken-1" data-i18n="login">Log in</a></li>
+    <li><a href="https://parkingnow-14273.web.app" class="btn yellow darken-2" data-i18n="registerAccount">Register Account</a></li>
+    <li class="divider"></li>
+    <li>
+        <a href="#" class="subheader" data-i18n="settings">Settings</a>
+    </li>
+    <li>
+        <button id="languageSwitcherMobile" class="btn-flat waves-effect white-text NT" style="text-align: left; width:100%; padding-left:32px; text-transform: none; font-size: 1rem;">
+            <i class="material-icons left">language</i><span data-i18n="languageButtonMobile">Language</span>
+        </button>
+    </li>
+    <li>
+        <div class="switch" style="padding-left: 32px; padding-top:14px; padding-bottom:14px; display:flex; align-items:center;">
+            <i class="material-icons white-text left" style="margin-right: 17px;">brightness_6</i>
+            <label class="white-text NT" aria-label="Toggle dark mode mobile" style="font-size: 1rem;">
+                <span data-i18n="darkMode" style="vertical-align: middle;">Dark Mode</span>
+                <input type="checkbox" id="darkModeToggleMobile">
+                <span class="lever" style="margin-left: 5px; margin-right: 5px;"></span>
+            </label>
+        </div>
+    </li>
+  </ul>
 
   <!-- Sección Misión -->
-  <section class="seccion mision">
-    <div class="contenido">
-      <div class="texto">
-        <h2>Misión</h2>
-        <p>Nuestra misión es revolucionar la forma en que las personas encuentran y gestionan espacios de estacionamiento, ofreciendo una solución eficiente, confiable y accesible desde cualquier dispositivo.</p>
-      </div>
-      <div class="imagen">
-        <img src="images/mision.jpg" alt="Imagen de misión">
+  <section class="section mision">
+    <div class="container">
+      <div class="row valign-wrapper">
+        <div class="col s12 m6">
+          <h2 data-i18n="aboutMissionTitle">Misión</h2>
+          <p data-i18n="aboutMissionText">Nuestra misión es revolucionar la forma en que las personas encuentran y gestionan espacios de estacionamiento, ofreciendo una solución eficiente, confiable y accesible desde cualquier dispositivo.</p>
+        </div>
+        <div class="col s12 m6">
+          <img src="images/mision.jpg" alt="Imagen de misión" class="responsive-img">
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Sección Visión -->
-  <section class="seccion vision">
-    <div class="contenido reverse">
-      <div class="texto">
-        <h2>Visión</h2>
-        <p>Ser la plataforma líder de estacionamiento inteligente en Latinoamérica, brindando una experiencia segura, rápida y tecnológica tanto para conductores como propietarios.</p>
-      </div>
-      <div class="imagen">
-        <img src="images/vision.jpg" alt="Imagen de visión">
+  <section class="section vision">
+    <div class="container">
+      <div class="row valign-wrapper">
+        <div class="col s12 m6 push-m6">
+          <h2 data-i18n="aboutVisionTitle">Visión</h2>
+          <p data-i18n="aboutVisionText">Ser la plataforma líder de estacionamiento inteligente en Latinoamérica, brindando una experiencia segura, rápida y tecnológica tanto para conductores como propietarios.</p>
+        </div>
+        <div class="col s12 m6 pull-m6">
+          <img src="images/vision.jpg" alt="Imagen de visión" class="responsive-img">
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Sección Características -->
-  <section class="seccion caracteristicas" id="caracteristicas">
-    <h2 class="titulo-seccion">Características Clave</h2>
-    <div class="grid-caracteristicas">
-      <div class="card">
-        <img src="images/reserva en tiempo real.jpg" alt="Reserva en tiempo real" />
-        <h3>Reserva en Tiempo Real</h3>
-        <p>Encuentra y asegura tu espacio de estacionamiento en cuestión de segundos desde cualquier lugar.</p>
-      </div>
-      <div class="card">
-        <img src="images/gestion.jpg" alt="Gestión para propietarios" />
-        <h3>Gestión Inteligente</h3>
-        <p>Los propietarios pueden monitorear ocupación, establecer precios y recibir pagos con facilidad.</p>
-      </div>
-      <div class="card">
-        <img src="images/negocio .png" alt="Integración empresarial" />
-        <h3>Integración Empresarial</h3>
-        <p>Incorpora nuestro sistema en tu negocio para ofrecer valor agregado a tus clientes.</p>
+  <section class="section caracteristicas" id="caracteristicas">
+    <div class="container">
+      <h2 class="center-align" data-i18n="aboutKeyFeaturesTitle">Características Clave</h2>
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/reserva en tiempo real.jpg" alt="Reserva en tiempo real">
+            </div>
+            <div class="card-content">
+              <span class="card-title" data-i18n="aboutFeature1Title">Reserva en Tiempo Real</span>
+              <p data-i18n="aboutFeature1Text">Encuentra y asegura tu espacio de estacionamiento en cuestión de segundos desde cualquier lugar.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/gestion.jpg" alt="Gestión para propietarios">
+            </div>
+            <div class="card-content">
+              <span class="card-title" data-i18n="aboutFeature2Title">Gestión Inteligente</span>
+              <p data-i18n="aboutFeature2Text">Los propietarios pueden monitorear ocupación, establecer precios y recibir pagos con facilidad.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="images/negocio .png" alt="Integración empresarial">
+            </div>
+            <div class="card-content">
+              <span class="card-title" data-i18n="aboutFeature3Title">Integración Empresarial</span>
+              <p data-i18n="aboutFeature3Text">Incorpora nuestro sistema en tu negocio para ofrecer valor agregado a tus clientes.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer id="contacto">
-    <div class="footer-top">
-      <div class="contacto">
-        <h3>Contacto</h3>
-        <p>Email: ParkingNowApp@gmail.com</p>
-        <p>Teléfono: +51 924 000 000</p>
-        <p>Dirección: Lima, Perú</p>
-      </div>
-      <div class="redes">
-        <div class="redes">
-        <h3>Nuestras redes</h3>
-        <div class="iconos-redes">
-          <a href="https://github.com/G3-UPC-CC238-346-ParkingNow" target="_blank"><img src="images/github.png" alt="GitHub" /></a>
+  <footer class="page-footer blue-grey darken-3">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text" style="font-family: Kalam, serif;" data-i18n="appName">Parking Now</h5>
+                <p class="grey-text text-lighten-4" data-i18n="footerAbout">Simplifying the parking experience in your city.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text" style="font-family: Kalam, serif;" data-i18n="footerLinks">Links</h5>
+                <ul>
+                    <li><a href="About.html" class="grey-text text-lighten-3" data-i18n="footerAboutLink">About</a></li>
+                    <li><a href="Caracteristicas.html" class="grey-text text-lighten-3" data-i18n="footerFeaturesLink">Features</a></li>
+                    <li><a href="Conditions.html" class="grey-text text-lighten-3" data-i18n="termsConditions">Terms&nbsp;and&nbsp;Conditions</a></li>
+                </ul>
+            </div>
         </div>
+         <div class="row">
+          <div class="col s12 center-align">
+              <h5 class="white-text" data-i18n="contactTitle">Contact Us</h5>
+              <p class="grey-text text-lighten-4" data-i18n="contactEmail">Email: ParkingNowApp@gmail.com</p>
+              <p class="grey-text text-lighten-4" data-i18n="contactPhone">Teléfono: +51 924 000 000</p>
+              <p class="grey-text text-lighten-4" data-i18n="contactAddress">Dirección: Lima, Perú</p>
+          </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>© 2025 PARKINGNOW. Todos los derechos reservados.</p>
+    <div class="footer-social" style="text-align: center; margin-top: 10px;">
+        <p data-i18n="footerSocial"></p>
+        <a href="https://github.com/G3-UPC-CC238-346-ParkingNow" target="_blank" aria-label="Visit our GitHub repository">
+            <button class="Btn">
+                <span class="svgContainer">
+                    <svg fill="white" viewBox="0 0 496 512" height="1.6em"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+                </span>
+            </button>
+        </a>
+    </div>
+    <div class="footer-copyright">
+        <div class="container" style="text-align: center;">
+            <p data-i18n="footerRights">© 2024 PARKINGNOW. All rights reserved</p>
+        </div>
     </div>
   </footer>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
 </body>
 </html>
